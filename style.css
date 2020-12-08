@@ -1,0 +1,471 @@
+
+body{
+    margin:0;
+    padding:0;
+}
+*{
+    box-sizing: border-box;
+  
+    outline:none;
+}
+/* HEADER CSS  */
+.header{
+    position: absolute;
+    top:3%;
+    left:0;
+    z-index:10;
+    width:100%;
+}
+.header__detail i,
+.header__detail span{
+    font-size:14px;
+}
+
+.header__detail span{
+    border-color: rgba(255,255,255,.2) !important;
+}
+.header__navbar__all{
+    margin-top:-15px;
+}
+.header__nav ul li a{
+    color:white !important;
+    font-size:14px !important;
+}
+
+.header__nav ul{
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.header__nav ul li a{
+    padding:0 20px !important; 
+}
+
+.header__nav ul li::after{
+    content:"";
+    display:block;
+    width:0%;
+    height:3px; 
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    transition:all 0.4s;
+}
+
+.header__nav ul li:hover::after{
+    width:100%;
+}
+
+.header__nav ul li.active::after{
+    width:100%;
+}
+/* END HEADER CSS  */
+
+/* CAROUSEL CSS  */
+.carousel__content{
+    position:relative;
+}
+.carousel-item__overlay{
+    width:100%;
+    height:100%;
+    background:linear-gradient(to top,black,transparent);
+    top:0;
+    left:0;
+    position:absolute;  
+}
+.carousel-item__caption{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.title{
+    color:#fbbd61;
+    font-size:16px;
+}
+.carousel-item__trailler span{
+    width:48px;
+    height:48px;
+    border:2px solid white;
+    line-height:44px;
+}
+
+.btn-orange{
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    border:none;
+    border-radius:30px;
+    padding:5px 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-orange span,.btn-orange i{
+    color:white;
+    border:none;
+    letter-spacing: 2px;
+}
+
+.carousel-indicators li{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.carousel-indicators li.active{
+    background-color:white;
+}
+
+.carousel-indicators {
+    justify-content: start;
+}
+
+.btn-orange::after{
+    content:"";
+    display:block;
+    background:#ec7332;
+    position: absolute;
+    width:0%;
+    height:100%;
+    top:0;
+    left:-15%;
+    transform: skewX(30deg);
+    transition:all 0.5s;
+}
+.btn-orange:hover::after{
+    width:120%;
+}
+.btn-orange i,.btn-orange span{
+    z-index:11;
+    position: relative;
+}
+.pg__css{
+    position: relative;
+    top: 6px;
+    left: 0;
+
+}
+.carousel-indicators{
+    position: absolute;
+    left: -96px;
+    top: 500px;
+}
+/* END CAROUSEL CSS  */
+
+/* MOVIE CSS  */
+.movie__title {
+    color:#ec7532;
+    font-size:18px;
+    letter-spacing: 1.7px;
+    border-bottom:1px solid #d8d8d8;
+    margin-top:30px;
+    padding:20px 0;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.movie__title::after{
+    content:"";
+    display:block;
+    position: absolute;
+    height:4px;
+    width:125px;
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    bottom:-1px;
+}
+.movie__item{
+    position:relative;
+    border-radius:15px;
+    overflow: hidden;
+}
+.movie__overlay--content{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:0;
+    text-align:center;
+    color:white;
+    width:100%;
+    opacity:0;
+    transition:all 0.8s;
+}
+
+.movie__overlay--content i{
+    width:80px;
+    height:80px;
+    border-radius:100%;
+    border:1px solid white;
+    line-height:80px;
+    cursor: pointer;
+
+}
+.movie__overlay--content a{
+    padding:10px 0;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size:14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.movie__overlay{
+    position:absolute;
+    background:linear-gradient(to top,#ec7632e7,#fbbd61e5);
+    top:0;
+    left:-380%;
+    width:300%;
+    height:100%;
+    transform: skewX(45deg);
+    transition:all 0.5s;    
+}
+
+.movie__item:hover .movie__overlay{
+    left:-80%;
+}
+.movie__item:hover .movie__overlay--content{
+    opacity:1;
+}
+.movie__text{
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+
+}
+.movie__text p{
+    font-size:18px;
+    font-weight:bold;
+
+}
+.movie__text i{
+    color:#fbbd61;
+}
+.slick-prev:before, .slick-next:before{
+    color:orange;
+    line-height:0;
+    position: absolute;
+    top:-30px;
+    left:0;
+}
+/* END MOVIE CSS  */
+
+/* SHOWTIME CSS  */
+.showtime{
+    margin-top:80px;
+}
+.showtime .nav-tabs .nav-item{
+    position: relative;
+}
+.showtime .nav-tabs .nav-item .nav-link.active{
+    border:white;
+    color: #ec7532;
+    font-weight:600;
+}
+.showtime .nav-tabs .nav-item .nav-link{
+    padding:15px 30px;
+    color:black;
+}
+.showtime .nav-tabs .nav-item .nav-link:hover{
+    border:white;
+}
+.showtime .nav-tabs .nav-item .nav-link::after{
+    content:"";
+    display:block;
+    width:0%;
+    height:3px;
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    transition:all 0.4s;
+    bottom:0;
+    left:0;
+    position: absolute;
+}
+.showtime .nav-tabs .nav-item .nav-link.active::after{
+    width:100%;
+    
+}
+.showtime .nav-tabs .nav-item:hover::after{
+    width:100%;
+}
+.showtime .nav-tabs .nav-item::after{
+    content:"";
+    display:block;
+    width:0%;
+    height:3px;
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+    transition:all 0.4s;
+    bottom:0;
+    left:0;
+    position: absolute;
+}
+
+.showtime img{
+    height:240px;
+}
+.showtime__detail span{
+    color:#ec7532;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.showtime__detail p{
+    color:#717171;
+    font-size:16px;
+}
+.detail__link{
+    display:block;
+    color:#ec7532;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin:20px 0;
+    transition:all 0.4s;
+}
+.detail__link:hover{
+    text-decoration:none;
+    color:black;
+}
+.showtime__item span{
+    letter-spacing: 2px;
+    font-size:12px;
+    padding:5px 0;
+}
+.showtime__item i{
+    font-size:12px;
+}
+.btn__custom{
+    color: #717171;
+    background-color: #d8d8d8;
+    letter-spacing: 2px;
+}
+.btn__custom.active{
+    letter-spacing: 2px;
+    color: #71717170;
+    background-color: #d8d8d875;
+}
+.showtime__list p{
+    font-size:14px;
+    font-weight:600;    
+}
+.text__custom span{
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 33px;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    margin-left: 5px;
+    text-align: center;
+    letter-spacing: 0;
+    color: #fff;
+    border-radius: 50%;
+    background: #4a4a4a;
+
+}
+.showtime__content::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:1px;
+    background:#dee2e6;
+    margin-top:30px;
+}
+/* END SHOWTIME CSS  */
+
+/* COMING SOON  */
+.coming-soon{
+    margin-top:50px;
+    background-color: black;
+    color: white;
+    height: 550px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.bg{
+    background-image:url(./img/slide-3.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.coming-soon__title {
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    line-height: 60px;
+    position: relative;
+    margin-bottom:40px;
+}
+.coming-soon__title::after{
+    content:"";
+    width:160px;
+    height:4px;
+    display:block;
+    position: absolute;
+    bottom:0;
+    left:0;
+    background:linear-gradient(to right,#fbbd61,#ec7532);
+}
+
+.coming-soon__detail h4{
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ec7532;
+}
+.coming-soon__detail h1{
+    font-size: 40px;
+}
+.rating i{
+    color:#fbbd61;
+    font-size:14px;
+}
+.calendar{
+    font-size: 16px;
+    opacity: .75;
+    color: #fff;
+}
+.discribe p{
+    padding:25px 0;
+}
+.discribe a{
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ec7532;
+    text-decoration:none;
+    transition:all 0.5s;
+}
+.discribe a:hover{
+    color:  #fbbd61;
+}
+.coming-soon__trailer{
+    background-image:url(./img/slide-3-video.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:relative;
+    width:100%;
+    height: 320px;
+}
+.coming-soon__trailer i{
+    width:84px;
+    height:84px;
+    display:block;
+    line-height:84px;
+    border:2px solid #ec7532;
+    border-radius:50%;
+    display:block;
+    text-align:center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition:all 0.5s;
+    font-size:25px;
+}
+.coming-soon__trailer i:hover{
+    width:79px;
+    height:79px;
+    display:block;
+    line-height:79px;
+    text-align:center;
+}
